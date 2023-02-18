@@ -60,16 +60,29 @@ table {
 /* en-font */
 /* font-family: 'Montserrat', sans-serif; */
 
+
+/* 한 페이지씩 넘기기 위한 기초 작업 */
+html, body {width: 100%; height: 100%;}
+section {
+    height: 100vh;
+}
+
 /* body */
 body {
 	background-color: #f6f6f6;
 }
 
 /* nav bar */
-nav {
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 50;
 	background-color:#f6f6f6de;
-    position: fixed;
-    width: 100%;
+}
+nav {
+    width: 1200px;
+	margin: 0 auto;
     top: 0;
     left: 0;
     height: 4rem;
@@ -90,10 +103,11 @@ nav {
 @media (max-width: 600px){
 
 	nav {
+		width: 10%;
 		height: 3rem;
 		justify-content: center;
 	}
-
+	
 	.nav_web_logo {
 		display: none;
 	}
@@ -103,5 +117,4 @@ nav {
 		width: 2.5rem;
 		height: auto;
 	}
-
 }
