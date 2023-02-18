@@ -146,7 +146,7 @@ nav {
 
 /* information */
 .information {
-	padding: 100px 0;
+	padding-top: 100px;
 	width: 1200px;
 	margin: 0 auto;
 	display: flex;
@@ -156,7 +156,6 @@ nav {
 .sub_title {
 	font-family: 'Pretendard-Regular';
 	font-size: 40px;
-
 }
 .activity_card {
 	margin: 0 auto;
@@ -164,20 +163,45 @@ nav {
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 20px;
+	width: 100%;
 }
 .activity-description {
 	width: 480px;
-	height: 260px;
+	height: 200px;
 	padding: 50px;
+	font-family: 'Pretendard-Regular';
 	word-break: keep-all;
 	border-radius: 10px;
 	background: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	margin: 0 auto;
 }
+.activity-description span {
+	font-size: 40px;
+}
+.activity-description p {
+	font-size: 20px;
+	line-height: 120%;
+}
+
 @media (max-width: 1200px) {
 	.apply p {
 		font-size: 40px;
 		height: 300px;
 		width: 600px;
+	}
+	.sub_title {
+		font-size: 30px;
+	}
+	.information {
+		width: 600px;
+	}
+	.activity_card {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-gap: 20px;
 	}
 }
 @media (max-width: 600px){
@@ -187,7 +211,6 @@ nav {
 		height: 3rem;
 		justify-content: center;
 	}
-	
 	.nav_web_logo {
 		display: none;
 	}
@@ -197,11 +220,29 @@ nav {
 		width: 2.5rem;
 		height: auto;
 	}
-
 	.apply p {
 		font-size: 30px;
 		height: 200px;
 		width: 280px;
-		word-break: keep-all
+		word-break: keep-all;
+	}
+	.information {
+		width: 80%;
+	}
+	.activity-description {
+		width: 60%;
+		height: 200px;
+		gap: 40px;
+		padding: 30px;
+		justify-content: space-evenly
+	}
+	.activity-description span {
+		font-size: 20px;
+	}
+	.activity-description p {
+		font-size: 15px;
+	}
+	.sub_title {
+		font-size: 20px;
 	}
 }
