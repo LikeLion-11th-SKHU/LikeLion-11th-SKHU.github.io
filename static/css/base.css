@@ -144,6 +144,35 @@ nav {
 	text-align: center;
 }
 
+/* information */
+.information {
+	padding: 100px 0;
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+.sub_title {
+	font-family: 'Pretendard-Regular';
+	font-size: 40px;
+
+}
+.activity_card {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+.activity-description {
+	width: 480px;
+	height: 260px;
+	padding: 50px;
+	word-break: keep-all;
+	border-radius: 10px;
+	background: #fff;
+}
 @media (max-width: 1200px) {
 	.apply p {
 		font-size: 40px;
