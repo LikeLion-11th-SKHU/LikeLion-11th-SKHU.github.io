@@ -146,12 +146,24 @@ nav {
 
 /* information */
 .information {
-	padding-top: 100px;
 	width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.padding-option__column {
+	display: flex;
+	flex-direction: column;
 	gap: 50px;
+}
+.padding-option__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	width: 80%;
 }
 .sub_title {
 	font-family: 'Pretendard-Regular';
@@ -170,13 +182,16 @@ nav {
 	height: 200px;
 	padding: 50px;
 	font-family: 'Pretendard-Regular';
-	word-break: keep-all;
-	border-radius: 10px;
-	background: #fff;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
 	margin: 0 auto;
+}
+.box__style {
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	word-break: keep-all;
 }
 .activity-description span {
 	font-size: 40px;
@@ -184,6 +199,77 @@ nav {
 .activity-description p {
 	font-size: 20px;
 	line-height: 120%;
+}
+
+/* who_when */
+.who_when {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.who-section {
+	width: 550px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	height: 100%;
+}
+.who_card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px; 
+	align-items: center;
+	justify-items: center;
+}
+.who-description {
+	width: 150px;
+	height: 150px;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+}
+.who-description span{
+	font-size: 40px;
+}
+.who-description p {
+	font-size: 25px;
+}
+.when-section {
+	width: 550px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	height: 100%;
+}
+.when_card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+}
+.when-description {
+	display: flex;
+	align-items: center;
+	height: 20px;
+	border-radius: 50px;
+	padding: 20px;
+	line-height: 120%;
+}
+#triangle {
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	border-top: 30px solid lightgray;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	opacity: 0.5;
 }
 
 @media (max-width: 1200px) {
@@ -197,11 +283,28 @@ nav {
 	}
 	.information {
 		width: 600px;
+		height: auto;
 	}
 	.activity_card {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(1, 1fr);
 		grid-gap: 20px;
+	}
+	.padding-option__row {
+		flex-direction: column;
+		padding-top: 100px;
+		gap: 100px;
+	}
+	.who_when {
+		width: 600px;
+		height: auto;
+	}
+	.padding-option__column {
+		padding-top: 100px;
+	}
+	.who-section, .when-section {
+		gap: 30px;
+		width: 100%;
 	}
 }
 @media (max-width: 600px){
@@ -226,8 +329,8 @@ nav {
 		width: 280px;
 		word-break: keep-all;
 	}
-	.information {
-		width: 80%;
+	.information, .who_when {
+		width: 90%;
 	}
 	.activity-description {
 		width: 60%;
@@ -244,5 +347,24 @@ nav {
 	}
 	.sub_title {
 		font-size: 20px;
+	}
+	.who-description {
+		width: 80%;
+		padding: 0 10%;
+	}
+	.who-description span, .who-description p{
+		font-size: 20px;
+	}
+
+	.who_card {
+		width: 100%;
+	}
+	.when-description {
+		height: 20px;
+	}
+	#triangle {
+		border-top: 20px solid lightgray;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
 	}
 }
