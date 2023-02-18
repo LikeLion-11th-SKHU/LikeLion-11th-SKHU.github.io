@@ -29,7 +29,14 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1; 
+	/* 스크롤 없애기 */
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+/* 스크롤 없애기 */
+::-webkit-scrollbar {
+ display: none;
 }
 ol, ul {
 	list-style: none;
@@ -100,6 +107,79 @@ nav {
 	display: none;
 }
 
+/* apply */
+.apply {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.apply p {
+	position: absolute;
+	font-family: 'Pretendard-Regular';
+	width: 1200px;
+	height: 500px;
+	top: 250px;
+	font-size: 60px;
+	z-index: 1;
+	text-align: center;
+	color: #fff;
+	line-height: 150%;
+}
+
+.apply_btn {
+	z-index: 1;
+	position: absolute;
+	bottom: 200px;
+	width: 200px;
+	height: 50px;
+	background: #FF7710;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 50px;
+	cursor: pointer;
+	text-align: center;
+}
+
+/* information */
+.information {
+	padding: 100px 0;
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+.sub_title {
+	font-family: 'Pretendard-Regular';
+	font-size: 40px;
+
+}
+.activity_card {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+.activity-description {
+	width: 480px;
+	height: 260px;
+	padding: 50px;
+	word-break: keep-all;
+	border-radius: 10px;
+	background: #fff;
+}
+@media (max-width: 1200px) {
+	.apply p {
+		font-size: 40px;
+		height: 300px;
+		width: 600px;
+	}
+}
 @media (max-width: 600px){
 
 	nav {
@@ -116,5 +196,12 @@ nav {
 		display: flex;
 		width: 2.5rem;
 		height: auto;
+	}
+
+	.apply p {
+		font-size: 30px;
+		height: 200px;
+		width: 280px;
+		word-break: keep-all
 	}
 }
