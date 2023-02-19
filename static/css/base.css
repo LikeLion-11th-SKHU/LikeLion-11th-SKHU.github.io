@@ -36,7 +36,7 @@ body {
 }
 /* 스크롤 없애기 */
 ::-webkit-scrollbar {
- display: none;
+	display: none;
 }
 ol, ul {
 	list-style: none;
@@ -117,18 +117,31 @@ body {
 }
 
 /* information */
-.information {
-	padding: 100px 0;
+.information, .curriculum {
 	width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	justify-content: center;
+	align-items: center;
+}
+.padding-option__column {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 100%;
+}
+.padding-option__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	width: 100%;
+	height: 80%;
 }
 .sub_title {
 	font-family: 'Pretendard-Regular';
 	font-size: 40px;
-
 }
 .activity_card {
 	margin: 0 auto;
@@ -136,20 +149,194 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 20px;
+	width: 100%;
 }
 .activity-description {
 	width: 480px;
-	height: 260px;
+	height: 200px;
 	padding: 50px;
-	word-break: keep-all;
+	font-family: 'Pretendard-Regular';
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	margin: 0 auto;
+}
+.box__style {
 	border-radius: 10px;
 	background: #fff;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	word-break: keep-all;
 }
+.activity-description span {
+	font-size: 40px;
+}
+.activity-description p {
+	font-size: 20px;
+	line-height: 120%;
+}
+
+/* who_when */
+.who_when {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.who-section {
+	width: 550px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	height: 100%;
+}
+.who_card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px; 
+	align-items: center;
+	justify-items: center;
+}
+.who-description {
+	width: 150px;
+	height: 150px;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+}
+.who-description span{
+	font-size: 40px;
+}
+.who-description p {
+	font-size: 25px;
+}
+.when-section {
+	width: 550px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	height: 100%;
+}
+.when_card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+}
+.when-description {
+	display: flex;
+	align-items: center;
+	height: 20px;
+	border-radius: 50px;
+	padding: 20px;
+	line-height: 120%;
+}
+#triangle {
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	border-top: 30px solid lightgray;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	opacity: 0.5;
+}
+
+/* curriculum */
+.curriculum-ex {
+	color: gray;
+}
+.curriculum-card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	width: 90%;
+	justify-items: center;
+	margin: 0 auto;
+}
+.curriculum__box {
+	width: 85%;
+	height: 140px;
+	padding: 30px;
+}
+.curriculum-description {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.curriculum-description span {
+	font-size: 30px;
+}
+.curriculum-description p {
+	font-size: 20px;
+}
+.curriculum-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	color: #fff;
+}
+.curriculum-img span {
+	z-index: 1;
+	font-size: 50px;
+}
+.curriculum-img img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	border-radius: 10px;
+	filter: brightness(50%)
+}
+
 @media (max-width: 1200px) {
 	.apply p {
 		font-size: 40px;
 		height: 300px;
 		width: 600px;
+	}
+	.sub_title {
+		font-size: 30px;
+	}
+	.information, .who_when, .curriculum {
+		width: 600px;
+		height: auto;
+	}
+	.activity_card {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-gap: 20px;
+	}
+	.padding-option__row {
+		flex-direction: column;
+		padding-top: 100px;
+		gap: 100px;
+	}
+
+	.padding-option__column {
+		padding-top: 100px;
+	}
+	.who-section, .when-section {
+		gap: 30px;
+		width: 100%;
+	}
+	.curriculum-card {
+		width: 100%;
+	}
+	.curriculum-description span {
+		font-size: 25px;
+	}
+	.curriculum-description p {
+		font-size: 15px;
+	}
+	.curriculum-img span {
+		font-size: 20px;
 	}
 }
 @media (max-width: 600px){
@@ -158,6 +345,60 @@ body {
 		font-size: 30px;
 		height: 200px;
 		width: 280px;
-		word-break: keep-all
+		word-break: keep-all;
+	}
+	.information, .who_when, .curriculum {
+		width: 90%;
+	}
+	.activity-description {
+		width: 60%;
+		height: 200px;
+		gap: 40px;
+		padding: 30px;
+		justify-content: space-evenly
+	}
+	.activity-description span {
+		font-size: 20px;
+	}
+	.activity-description p {
+		font-size: 15px;
+	}
+	.sub_title {
+		font-size: 20px;
+	}
+	.who-description {
+		width: 80%;
+		padding: 0 10%;
+	}
+	.who-description span, .who-description p{
+		font-size: 20px;
+	}
+	.who_card {
+		width: 100%;
+	}
+	.when-description {
+		height: 20px;
+	}
+	#triangle {
+		border-top: 20px solid lightgray;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+	}
+	.curriculum-card {
+		width: 90%;
+		gap: 10px;
+	}
+	.curriculum__box {
+		padding: 10px;
+	}
+	.curriculum-description {
+		justify-content: center;
+		gap: 20px;
+	}
+	.curriculum-description span {
+		font-size: 15px;
+	}
+	.curriculum-description p {
+		font-size: 10px;
 	}
 }
