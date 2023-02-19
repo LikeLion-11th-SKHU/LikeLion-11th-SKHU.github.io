@@ -1,0 +1,218 @@
+.section_title {
+	font-family: 'Pretendard-Regular';
+	font-weight: 800;
+	font-size: 3vw;
+	margin-bottom: 10vh;
+}
+
+.project {
+	margin: 10%;
+	width: 90%;
+	height: auto;
+	position: relative;
+}
+
+.slide_frame {
+	display: flex;
+	width: 90%;
+	height: 50vh;
+	/* border: solid 1px green; */
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide {
+	/* layout */
+	display: flex;
+	flex-wrap: nowrap;
+
+	/* 요소 세로 정렬 */
+	flex-direction: column;
+
+	/* 컨테이너의 내용물이 컨테이너 크기(width, height)를 넘어설 때 보이지 않도록 하기 위해 hidden을 준다. */
+	/* overflow: hidden; */
+
+	/* position */
+	/* slide_button의 position absolute가 컨테이너 안쪽에서 top, left, right offset이 적용될 수 있도록 relative를 준다. (기본값이 static인데, static인 경우 그 상위 컨테이너로 나가면서 현재 코드에선 html을 기준으로 offset을 적용시키기 때문) */
+	position: absolute;
+
+	/* size */
+	width: 70%;
+	height: 33vh;
+
+	/* 요소가 드래그로 선택되는것을 방지 */
+	user-select: none;
+
+	/* border: solid 1px red; */
+
+	/* 요소들 가로 가운데 정렬 */
+	align-items: center;
+}
+
+.slide_blur {
+	z-index: 997;
+	border: solid 10vw #f6f6f6de;
+	width: 70%;
+	height: 33vh;
+}
+
+.slide_item {
+	align-items: center;
+	justify-content: center;
+
+	/* layout */
+	display: flex;
+
+	/* position - 버튼 클릭시 left offset값을 적용시키기 위해 */
+	position: relative;
+	top: 0vh;
+
+	/* size */
+	width: 100%;
+	height: 33vh;
+
+	/* flex item의 flex-shrink는 기본값이 1이므로 컨테이너 크기에 맞게 줄어드는데, 슬라이드를 구현할 것이므로 줄어들지 않도록 0을 준다. */
+	flex-shrink: 0;
+
+	/* transition */
+	transition: top 0.15s;
+	/* border: solid 1px black; */
+}
+
+.slide_img {
+	width: 25vw;
+	height: 30vh;
+}
+
+.slide_text {
+	margin-right: 10%;
+	/* border: solid 2px red; */
+	width: 50%;
+	height: 100%;
+}
+
+.project_title {
+	font-family: 'Pretendard-Regular';
+	font-weight: 700;
+	font-size: 2vw;
+	margin-top: 10%;
+	margin-bottom: 5vh;
+}
+
+.project_content {
+	font-family: 'Pretendard-Regular';
+	font-size: 1vw;
+	margin-bottom: 2vh;
+}
+
+.project_member {
+	font-family: 'Pretendard-Regular';
+	font-size: 1vw;
+	font-weight: 800;
+}
+
+/* 버튼 */
+
+.slide_button {
+	display: flex;
+	align-items: center;
+	/* position */
+	position: absolute;
+
+	/* style */
+	cursor: pointer;
+
+	/* blur보다 앞에 위치시키기 위해 */
+	z-index: 999;
+}
+
+.slide_prev_button {
+	right: 5%;
+	top: 20%
+}
+
+.slide_next_button {
+	right: 5%;
+	bottom: 20%;
+}
+
+.slide_button_img {
+	/* size */
+	width: 1.7vw;
+	height: auto;
+	opacity: 0.5;
+}
+
+.slide_button_img:hover {
+	opacity: 1;
+}
+
+
+/* 페이지네이션 스타일 */
+
+ul,
+li {
+	/* list-style-type: none; -> 얘가 적용이 안 되어서 결국 배경과 색상을 동일하게 함*/
+	padding: 0;
+	margin: 0;
+}
+
+.slide_pagination {
+	/* layout */
+	display: flex;
+	/* 세로 정렬 */
+	flex-direction: column;
+	gap: 2vh;
+
+	/* position */
+	position: absolute;
+	left: 5%;
+	/* left:50%, translateX(-50%)를 하면 가로 가운데로 위치시킬 수 있다. */
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1vh;
+
+	/* blur보다 앞에 위치시키기 위해 */
+	z-index: 999;
+}
+
+.slide_pagination>li {
+	/* 현재 슬라이드가 아닌 것은 투명도 부여 */
+	background-color:#c0c0c0; 
+	color: #c0c0c0;
+	cursor: pointer;
+	
+	width: 1.5vh;
+	height: 1.5vh;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide_pagination>li.active {
+	/* 현재 슬라이드 색상은 투명도 없이 */
+	background-color: #FF7710;
+	color: #FF7710;
+
+	width: 1.5vh;
+	height: 1.5vh;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* .slide_item_duplicate {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 300px;
+	flex-shrink: 0;
+	transition: top 0.15s;
+} */

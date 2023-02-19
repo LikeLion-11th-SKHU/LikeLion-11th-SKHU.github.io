@@ -1,0 +1,77 @@
+/* nav bar */
+
+nav {
+	background-color:#000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 4rem;
+	display: flex;
+	align-items: center;
+	z-index: 99999;
+}
+
+.nav_web_logo {
+	width: 15rem;
+	height: auto;
+	margin-left: 1rem;
+}
+
+.nav_mobile_logo {
+	display: none;
+}
+
+@media (max-width: 600px){
+
+	nav {
+		height: 3rem;
+		justify-content: center;
+	}
+
+	.nav_web_logo {
+		display: none;
+	}
+
+	.nav_mobile_logo {
+		display: flex;
+		width: 2.5rem;
+		height: auto;
+	}
+
+}
+
+
+/* footer */
+
+footer {
+	background-color: #000000;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+	height: 15vh;
+	/* 중간에 내용이 없으니 footer인데 위로 올라와서 */
+	bottom : 0;
+
+	width: 100%;
+	font-family: 'Pretendard-Regular';
+	font-size: 0.7vw;
+}
+
+.footer_text {
+	display: flex;
+	align-items: center;
+	grid-column: 2;
+	color: white;
+}
+
+.footer_sns {
+	display: flex;
+	align-items: center;
+	grid-column: 3;
+	gap: 2vw;
+	justify-content: flex-end;
+}
+
+.footer_sns img {
+	height: 3vh;
+}
