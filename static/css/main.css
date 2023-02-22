@@ -92,4 +92,9 @@
 		position: absolute;
 		bottom: 100px;
 	}
+
+	.apply_btn:hover {
+		background: #ff78106f;
+		bottom: 120px;
+	}
 }
