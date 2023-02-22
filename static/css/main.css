@@ -1,0 +1,95 @@
+/* apply */
+
+.main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	color: #ffffff;
+	background-color: #222;
+	z-index: 2;
+}
+
+.motion_frame {
+	width: 80%;
+	height: 50%;
+	padding-top: 15vh;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+}
+
+.motion_div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.motion_text {
+	width: 100%;
+	font-size: 5rem;
+	line-height: 7rem;
+	font-weight: 600;;
+	z-index: 999;
+}
+
+.motion_text:after {
+	content: '';
+	margin-left: .4rem;
+	border-right: 2px solid #777;
+	animation: cursor .9s infinite steps(2);
+	text-shadow: 1px 1px 1px gray;
+}
+
+@keyframes cursor {
+	from {
+		border-right: 4px solid #FF7710;
+	}
+
+	to {
+		border-right: 4px solid #ff781012;
+	}
+}
+
+.apply_btn {
+	z-index: 999;
+	position: absolute;
+	bottom: 180px;
+	width: 200px;
+	height: 50px;
+	background: #FF7710;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	user-select: none;
+	box-shadow: 3px 3px 7px #ff78109e;
+	transition: all 0.2s ease;
+}
+
+.apply_btn:hover {
+	background: #ff78106f;
+	bottom: 190px;
+}
+
+@media (max-width: 600px) {
+	
+	.motion_text {
+		font-size: 2rem;
+		line-height: 4rem;
+	}
+
+	.apply_btn {
+		z-index: 999;
+		position: absolute;
+		bottom: 100px;
+	}
+}

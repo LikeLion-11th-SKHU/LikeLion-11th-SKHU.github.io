@@ -1,15 +1,31 @@
+.information, .rule_div, .curriculum {
+	margin-bottom: 100px;
+}
+
+.project {
+	margin-bottom: 300px;
+}
+
+/* position sticky는 상위 요소에 height가 적용되어 있어야한다. */
+.body2{
+	min-height: 100%;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+
 /* nav bar */
 
 nav {
-	background-color:#000000;
-    position: fixed;
+	background-color:#f6f6f6c7;
     width: 100%;
-    top: 0;
     left: 0;
     height: 4rem;
 	display: flex;
 	align-items: center;
 	z-index: 99999;
+	position: sticky;
+	top: 0;
 }
 
 .nav_web_logo {
@@ -22,29 +38,37 @@ nav {
 	display: none;
 }
 
-@media (max-width: 600px){
 
-	nav {
-		height: 3rem;
-		justify-content: center;
-	}
+/* 규칙 */
 
-	.nav_web_logo {
-		display: none;
-	}
-
-	.nav_mobile_logo {
-		display: flex;
-		width: 2.5rem;
-		height: auto;
+@media (max-width: 1500px) {
+	
+	.rule_div {
+		margin-top: 70px;
 	}
 
 }
 
 
+.rule_div {
+	text-align: center;
+	width: 100%;
+	color: #FF7710;
+	font-size: 1.2vw;
+}
+
+.rule_link {
+	text-align: center;
+	color: #FF7710;
+	font-size: 1.2vw;
+	font-weight: 600;
+}
+
+
+
 /* footer */
 
-footer {
+.footer_web {
 	background-color: #000000;
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
@@ -55,6 +79,10 @@ footer {
 	width: 100%;
 	font-family: 'Pretendard-Regular';
 	font-size: 0.7vw;
+	position: relative;
+
+	position: relative;
+    transform: translatY(-100%);
 }
 
 .footer_text {
@@ -74,4 +102,101 @@ footer {
 
 .footer_sns img {
 	height: 3vh;
+}
+
+.footer_mobile {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+
+	.project {
+		margin-bottom: 0px;
+	}
+
+	.rule_div {
+		font-size: 2vw;
+		margin-top: 70px;
+	}
+
+	.rule_link {
+		font-size: 2vw;
+	}
+
+}
+
+
+@media (max-width: 600px) {
+
+	nav {
+		height: 3rem;
+		justify-content: center;
+	}
+
+	.nav_web_logo {
+		display: none;
+	}
+
+	.nav_mobile_logo {
+		display: flex;
+		width: 2.5rem;
+		height: auto;
+	}
+
+	.rule_div {
+		text-align: center;
+		width: 80%;
+		font-size: 5vw;
+		padding: 30px 30px 0 30px;
+		line-height: 120%;
+	}
+
+	.rule_link {
+		font-size: 5vw;
+	}
+
+	.footer_web {
+		display: none;
+	}
+
+	.footer_mobile {
+		background-color: #000000;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 10% 40% 40% 10%;
+		height: 30vh;
+		bottom: 0;
+
+		width: 100%;
+		font-family: 'Pretendard-Regular';
+		position: relative;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.footer_sns {
+		grid-column: 1;
+		grid-row: 2;
+		display: flex;
+		align-items: center;
+		gap: 10vw;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.footer_sns img {
+		height: 5vh;
+	}
+
+	.footer_text {
+		width: 100%;
+		grid-column: 1;
+		grid-row: 3;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		text-align: center;
+		font-size: 3.5vw;
+	}
 }

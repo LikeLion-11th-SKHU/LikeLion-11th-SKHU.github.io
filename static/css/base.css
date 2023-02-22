@@ -30,13 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1; 
-	/* 스크롤 없애기 */
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-/* 스크롤 없애기 */
-::-webkit-scrollbar {
-	display: none;
+	font-family: 'Pretendard-Regular';
 }
 ol, ul {
 	list-style: none;
@@ -68,6 +62,7 @@ table {
 /* font-family: 'Montserrat', sans-serif; */
 
 
+
 /* 한 페이지씩 넘기기 위한 기초 작업 */
 html, body {width: 100%; height: 100%;}
 section {
@@ -79,46 +74,9 @@ body {
 	background-color: #f6f6f6;
 }
 
-/* apply */
-.apply {
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.apply p {
-	position: absolute;
-	font-family: 'Pretendard-Regular';
-	width: 1200px;
-	height: 500px;
-	top: 250px;
-	font-size: 60px;
-	z-index: 1;
-	text-align: center;
-	color: #fff;
-	line-height: 150%;
-}
-
-.apply_btn {
-	z-index: 1;
-	position: absolute;
-	bottom: 200px;
-	width: 200px;
-	height: 50px;
-	background: #FF7710;
-	border: none;
-	color: #fff;
-	font-size: 20px;
-	border-radius: 50px;
-	cursor: pointer;
-	text-align: center;
-}
-
 /* information */
-.information, .curriculum {
-	width: 1200px;
+.information, .curriculum, .project, .qna {
+	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -142,6 +100,8 @@ body {
 .sub_title {
 	font-family: 'Pretendard-Regular';
 	font-size: 40px;
+	font-weight: 600;
+	line-height: 150%;
 }
 .activity_card {
 	margin: 0 auto;
@@ -273,6 +233,7 @@ body {
 }
 .curriculum-description p {
 	font-size: 20px;
+	line-height: 130%; 
 }
 .curriculum-img {
 	display: flex;
@@ -304,7 +265,7 @@ body {
 	.sub_title {
 		font-size: 30px;
 	}
-	.information, .who_when, .curriculum {
+	.information, .who_when, .curriculum, .project, .qna {
 		width: 600px;
 		height: auto;
 	}
@@ -347,7 +308,7 @@ body {
 		width: 280px;
 		word-break: keep-all;
 	}
-	.information, .who_when, .curriculum {
+	.information, .who_when, .curriculum, .project, .qna {
 		width: 90%;
 	}
 	.activity-description {
