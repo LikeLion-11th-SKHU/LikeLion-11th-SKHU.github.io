@@ -608,7 +608,7 @@
 		background-color: #c0c0c0;
 		color: azure;
 		cursor: pointer;
-		font-size: 50%;
+		font-size: 70%;
 		text-align: center;
 		transition: all 0.2s ease;
 	}
@@ -616,8 +616,8 @@
 	.slide_button_m:hover {
 		background-color: #FF7710;
 		box-shadow: 3px 3px 3px #ff78103f;
-		width: 3.5vh;
-		height: 3.5vh;
+		width: 4.5vh;
+		height: 4.5vh;
 		transition: all 0.2s ease;
 	}
 
