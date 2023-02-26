@@ -1,5 +1,11 @@
 .qna {
-	margin-bottom: 30vh;
+	position: relative;
+	height: 140vh;
+}
+
+.qna .padding-option__column {
+	position: absolute;
+	top: 0;
 }
 
 /* 카테고리 탭 */
@@ -153,11 +159,6 @@ input[name="tab_item"] {
 	color: #FF7710;
 }
 
-
-.sadf {
-
-}
-
 @media (max-width: 1200px) {
 
 	/* 탭 스타일 */
@@ -212,11 +213,11 @@ input[name="tab_item"] {
 	}
 }
 
-.afd {
-
-}
-
 @media (max-width: 600px) {
+
+	.qna {
+		height: 230vh;
+	}
 
 	/* 탭 스타일 */
 	.tab_item {

@@ -10,7 +10,7 @@
 .body2{
 	min-height: 100%;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 15vh;
 }
 
 
@@ -157,6 +157,10 @@ nav {
 
 	.footer_web {
 		display: none;
+	}
+
+	.body2{
+		padding-bottom: 30vh;
 	}
 
 	.footer_mobile {
